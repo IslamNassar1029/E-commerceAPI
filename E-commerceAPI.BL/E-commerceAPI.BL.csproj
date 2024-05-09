@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>E_commerceAPI.BL</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Dtos\Authentication\" />
+    <Folder Include="Dtos\Carts\" />
+    <Folder Include="Dtos\Categories\" />
+    <Folder Include="Dtos\Orders\" />
+    <Folder Include="Managers\Categories\" />
+    <Folder Include="Managers\Orders\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\E-commerceAPI.DAL\E-commerceAPI.DAL.csproj" />
+  </ItemGroup>
+
+
+
+</Project>
