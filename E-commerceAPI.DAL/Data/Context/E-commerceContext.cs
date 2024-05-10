@@ -15,7 +15,7 @@ namespace E_commerceAPI.DAL.Data.Context
     {
         public E_commerceContext(DbContextOptions options):base(options) { }
 
-        //public DbSet<Cart> Carts=>Set<Cart>();
+        public DbSet<Cart> Carts=>Set<Cart>();
         //public DbSet<Order> Orders=>Set<Order>();
         public DbSet<Product> Products=>Set<Product>();
         public DbSet<Category> Categories=>Set<Category>();

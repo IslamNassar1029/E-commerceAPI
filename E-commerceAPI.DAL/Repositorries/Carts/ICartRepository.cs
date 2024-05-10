@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace E_commerceAPI.DAL.Repositorries.Carts
 {
-    public interface ICartRepository:IGenericRepository<Cart>
+    public interface ICartRepository : IGenericRepository<Cart>
     {
+        Cart GetByUserIdAndProductId(string userId, int productId);
     }
 }

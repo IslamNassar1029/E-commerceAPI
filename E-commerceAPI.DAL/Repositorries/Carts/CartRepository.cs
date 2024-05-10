@@ -14,5 +14,12 @@ namespace E_commerceAPI.DAL.Repositorries.Carts
         : base(context)
         {
         }
+
+        public Cart? GetByUserIdAndProductId(string userId, int productId)
+        {
+           return _context.Set<Cart>()
+                .Where(c=>c.UserId == userId&&c.ProductId==productId)
+                .FirstOrDefault();
+        }
     }
 }

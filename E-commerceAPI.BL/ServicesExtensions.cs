@@ -1,4 +1,5 @@
-﻿using E_commerceAPI.BL.Managers.Products;
+﻿using E_commerceAPI.BL.Managers.Carts;
+using E_commerceAPI.BL.Managers.Products;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,9 @@ namespace E_commerceAPI.BL
         public static void AddBLServices(this IServiceCollection services) 
         {
             services.AddScoped<IProductManager, ProductManager>();
-        
+            services.AddScoped<ICartManager, CartManager>();
+
+
         }
     }
 }

@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Dtos\Authentication\" />
-    <Folder Include="Dtos\Carts\" />
     <Folder Include="Dtos\Categories\" />
     <Folder Include="Dtos\Orders\" />
     <Folder Include="Managers\Categories\" />

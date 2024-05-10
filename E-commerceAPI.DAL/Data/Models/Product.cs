@@ -21,6 +21,7 @@ namespace E_commerceAPI.DAL
 
         public Category Category { get; set; } = null!;
 
+        public IEnumerable<Cart> Carts { get; set; } = new HashSet<Cart>();
         //public ICollection<Order> Orders { get; set; } = new HashSet<Order>();
 
     }

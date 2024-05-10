@@ -10,7 +10,6 @@ namespace E_commerceAPI.DAL
     public class Cart
     {
         public int Id { get; set; }
-        public DateTime CreationDateTime{ get; set; }= DateTime.Now;
         public int Quantity { get; set; }
         public int ProductId { get; set; }
 
