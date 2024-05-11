@@ -12,5 +12,13 @@ namespace E_commerceAPI.DAL.Repositorries.Orders
     {
         public OrderRepository(E_commerceContext context) : base(context) { }
 
+        public int GetLastOrderId(string userId)
+        {
+            return _context.Set<Order>()
+                .Where(o => o.UserId == userId)
+                .OrderByDescending(o => o.CreationOrderDate)
+                .First().Id;
+        }
+
     }
 }

@@ -12,10 +12,10 @@ namespace E_commerceAPI.DAL.Data.Models
         public int ProductId { get; set; }= 0;
         public int OrderId { get; set; }= 0;
         public int ProductCount { get; set; } = 0;
-
+        public decimal ProductPriceAtThisTime { get; set; }
         public Product Product { get; set; } = null!;
 
-        public Order    order { get; set; }=null!;
+        public Order    Order { get; set; }=null!;
 
     }
 }

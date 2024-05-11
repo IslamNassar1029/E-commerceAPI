@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace E_commerceAPI.DAL.Repositorries.Orders
 {
-    public interface IOrderRepository:IGenericRepository<Order>
+    public interface IOrderRepository : IGenericRepository<Order>
     {
+        int GetLastOrderId(string userId);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_commerceAPI.DAL.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,7 @@ namespace E_commerceAPI.DAL
         public Category Category { get; set; } = null!;
 
         public IEnumerable<Cart> Carts { get; set; } = new HashSet<Cart>();
-        //public ICollection<Order> Orders { get; set; } = new HashSet<Order>();
+        public IEnumerable<OrderProduct> OrderProducts { get; set; } = new HashSet<OrderProduct>();
 
     }
 

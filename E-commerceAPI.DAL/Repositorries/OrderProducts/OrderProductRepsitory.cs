@@ -15,5 +15,10 @@ namespace E_commerceAPI.DAL.Repositorries.OrderProducts
         public OrderProductRepsitory(E_commerceContext context) : base(context)
         {
         }
+
+        public void AddRange(IEnumerable<OrderProduct> orderProductsToAdd)
+        {
+            _context.Set<OrderProduct>().AddRange(orderProductsToAdd);
+        }
     }
 }

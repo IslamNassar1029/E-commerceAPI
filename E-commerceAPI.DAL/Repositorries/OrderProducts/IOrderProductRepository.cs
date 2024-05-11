@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace E_commerceAPI.DAL.Repositorries.OrderProducts
 {
-    public interface IOrderProductRepository:IGenericRepository<OrderProduct>
+    public interface IOrderProductRepository : IGenericRepository<OrderProduct>
     {
+        void AddRange(IEnumerable<OrderProduct> orderProductsToAdd);
     }
 }

@@ -1,6 +1,8 @@
 ﻿using E_commerceAPI.DAL.Data.Context;
 using E_commerceAPI.DAL.Repositorries.Carts;
 using E_commerceAPI.DAL.Repositorries.Categories;
+using E_commerceAPI.DAL.Repositorries.OrderProducts;
+using E_commerceAPI.DAL.Repositorries.Orders;
 using E_commerceAPI.DAL.Repositorries.Products;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -22,6 +24,8 @@ namespace E_commerceAPI.DAL
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICartRepository, CartRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IOrderProductRepository, OrderProductRepsitory>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         }
