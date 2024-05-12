@@ -16,6 +16,54 @@ namespace E_commerceAPI.BL.Managers.Products
         {
             _unitOfWork = unitOfWork;
         }
+
+        public void AddProduct(AddProductDto product)
+        {
+            var newProduct=new Product()
+            {
+                Price = product.Price,
+                Model = product.Model,
+                Description = product.Description,
+                Discount = product.Discount,
+                ProductImageURL = product.ProductImageURL,
+                CategoryId = product.CategoryId,
+                Name = product.Name,
+            }; 
+            _unitOfWork.ProductRepository.Add(newProduct);
+            _unitOfWork.SaveChanges();
+        }
+
+        public bool DeleteProduct(int id)
+        {
+            var deleteProduct = _unitOfWork.ProductRepository.GetById(id);
+            if ( deleteProduct == null)
+            {
+                return false;
+            }
+            _unitOfWork.ProductRepository.Delete(deleteProduct);
+            _unitOfWork.SaveChanges();
+            return true;
+        }
+
+        public void EditProduct(EditProductDto product)
+        {
+            var editProduct =_unitOfWork.ProductRepository.GetById(product.Id);
+            if (editProduct == null)
+                {
+                    return ;
+                }
+            editProduct.Price = product.Price;
+            editProduct.Model = product.Model;
+            editProduct.Description = product.Description;
+            editProduct.Discount = product.Discount;
+            editProduct.ProductImageURL = product.ProductImageURL;
+            editProduct.CategoryId = product.CategoryId;
+            editProduct.Name = product.Name;
+
+            _unitOfWork.ProductRepository.Update(editProduct);
+            _unitOfWork.SaveChanges();
+        }
+
         public IEnumerable<ProductReadDto> GetAll()
         {
             var products=_unitOfWork.ProductRepository.GetAll();
