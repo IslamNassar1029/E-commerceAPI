@@ -19,7 +19,7 @@ namespace E_commerceAPI.BL.Managers.Orders
             _unitOfWork = unitOfWork;
         }
 
-        public void AddOrder(List<OrderProductList> orderProductLists, string userId)
+        public void AddOrder(List<OrderProductListDTO> orderProductLists, string userId)
         {
             if (orderProductLists == null)
             {
@@ -91,10 +91,10 @@ namespace E_commerceAPI.BL.Managers.Orders
             _unitOfWork.SaveChanges();
         }
 
-        public IEnumerable<ReadOrderHistory> GetOrderSHistory()
+        public IEnumerable<ReadOrderHistoryDTO> GetOrderSHistory()
         {
             var orders = _unitOfWork.OrderRepository.GetAll();
-            var ordersHistory = orders.Select(o => new ReadOrderHistory()
+            var ordersHistory = orders.Select(o => new ReadOrderHistoryDTO()
             {
                 Id = o.Id,
                 TotelPrice = o.TotelPrice,

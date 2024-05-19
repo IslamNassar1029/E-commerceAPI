@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace E_commerceAPI.BL.Dtos.OrderProducts
 {
-    public class OrderProductList
+    public class OrderProductListDTO
     {
         public int ProductCount { get; set; } = 0;
         public int ProductId { get; set; } = 0;

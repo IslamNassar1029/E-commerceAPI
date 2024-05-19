@@ -62,7 +62,5 @@ namespace E_commerceAPI.APIs.Controllers
 
             return isDeleted ? Ok("product was Deleted Successfully") : BadRequest();
         }
-
-
     }
 }

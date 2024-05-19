@@ -22,7 +22,7 @@ namespace E_commerceAPI.APIs.Controllers
         [Authorize]
         [HttpPost]
         [Route("AddOrder")]
-        public ActionResult AddOrder(List<OrderProductList> orderProductLists)
+        public ActionResult AddOrder(List<OrderProductListDTO> orderProductLists)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
             if (userId is null)
@@ -38,7 +38,7 @@ namespace E_commerceAPI.APIs.Controllers
         [HttpGet]
         [Route("OrderHistory")]
 
-        public ActionResult<IEnumerable<ReadOrderHistory>> GetOrdersHistory()
+        public ActionResult<IEnumerable<ReadOrderHistoryDTO>> GetOrdersHistory()
         {
           var orderHistoryList=  _orderManager.GetOrderSHistory();
             return orderHistoryList.ToList();

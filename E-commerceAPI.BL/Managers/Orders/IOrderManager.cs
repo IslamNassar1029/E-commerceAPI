@@ -10,7 +10,7 @@ namespace E_commerceAPI.BL.Managers.Orders
 {
     public interface IOrderManager
     {
-        void AddOrder(List<OrderProductList> orderProductLists, string userId);
-        IEnumerable<ReadOrderHistory> GetOrderSHistory();
+        void AddOrder(List<OrderProductListDTO> orderProductLists, string userId);
+        IEnumerable<ReadOrderHistoryDTO> GetOrderSHistory();
     }
 }

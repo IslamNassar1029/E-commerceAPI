@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace E_commerceAPI.BL.Dtos.Orders
 {
-    public class ReadOrderHistory
+    public class ReadOrderHistoryDTO
     {
         public int Id { get; set; }
         public DateTime CreationOrderDate { get; set; }

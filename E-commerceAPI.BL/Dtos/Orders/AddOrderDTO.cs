@@ -9,13 +9,13 @@ using E_commerceAPI.BL.Dtos.OrderProducts;
 
 namespace E_commerceAPI.BL.Dtos.Orders
 {
-    public class AddOrder
+    public class AddOrderDTO
     {
         //public DateTime CreationOrderDate { get; set; } = DateTime.Now;
         //public DateTime? DeliverdDate { get; set; } = null;
         //public decimal TotelPrice { get; set; }
         //public OrderStatus OrderStatus { get; set; }=OrderStatus.Processing;
-        public IEnumerable<OrderProductList> OrderProducts { get; set; } = [];
+        public IEnumerable<OrderProductListDTO> OrderProducts { get; set; } = [];
 
         //public string? UserId { get; set; } = string.Empty;
        
