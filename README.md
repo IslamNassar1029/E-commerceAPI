@@ -76,6 +76,12 @@ Images
 
 POST /api/Files: Upload an image to static files and return the URL of the uploaded image.
 
+Video Demonstration
+A video demonstration showcasing the testing of all endpoints using Postman can be accessed here.
+This video provides a comprehensive overview of the API functionality, including user authentication, product management, cart operations, and order processing.
+
+https://drive.google.com/file/d/1bQPMNqQTgs-Y9LHimKxGCKqkGHUfgKz8/view?usp=sharing
+
 
 
 
